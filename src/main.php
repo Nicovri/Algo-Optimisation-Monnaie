@@ -1,6 +1,6 @@
 <?php
 
-    require_once 'class.Rendu.php';
+    require_once 'Rendu.php';
 
     const BILLET_2 = 2;
     const BILLET_5 = 5;
@@ -8,16 +8,16 @@
 
     $billets = array(BILLET_2, BILLET_5, BILLET_10);
 
-    $rendu = new Rendu(155, $billets);
+    $rendu = new Rendu(6, $billets);
 
-    echo "Billets: ";
+    echo "Billets: \n";
     foreach($rendu->billets as $billet) {
         echo $billet . "\n";
     }
 
     echo "Montant: " . $rendu->montant . "\n";
 
-    echo "Nombres: ";
+    echo "Nombres: \n";
     foreach($rendu->nombres as $nombre) {
         echo $nombre . "\n";
     }

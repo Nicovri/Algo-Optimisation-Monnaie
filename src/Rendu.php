@@ -41,8 +41,10 @@ class Rendu {
             }
 
             if($montant !== 0) {
-                $montant += $billets[0];
-                $nombres[0] -= 1;
+                if($billets[0] !== 0) {
+                    $montant += $billets[0];
+                    $nombres[0] -= 1;
+                }
                 $nombres2 = $this->rendu($montant, array_slice($billets, 1));
                 foreach($nombres2 as $i => $nombre2) {
                     $nombres[$i+1] += $nombre2;
@@ -57,7 +59,5 @@ class Rendu {
         }
     }
 }
-
-
 
 ?>
